@@ -1,6 +1,7 @@
-IMAGE="jahrik/arm-mysql"
-TAG:=$(shell uname -m)
-STACK=mysql
+.EXPORT_ALL_VARIABLES:
+IMAGE = "jahrik/arm-mysql"
+TAG = latest
+STACK = "mysql"
 
 all: build
 
@@ -11,4 +12,6 @@ push:
 	@docker push ${IMAGE}:$(TAG)
 
 deploy:
-	@docker stack deploy -c docker-compose.yml $(STACK)
+	@docker stack deploy -c docker-compose.yml ${STACK}
+
+.PHONY: all build push deploy

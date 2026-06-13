@@ -1,2 +1,3 @@
-FROM arm64v8/mariadb:10.2
+FROM docker.io/library/mariadb:11.8.8
 
+LABEL org.opencontainers.image.authors="jahrik@gmail.com"
