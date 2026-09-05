@@ -5,9 +5,9 @@ Multi-arch MariaDB image: pinned `FROM` over official `mariadb` LTS, deployed as
 ## Commands
 
 ```bash
-make build                                  # build jahrik/arm-mysql:latest
+just build                                  # build jahrik/arm-mysql:latest
 docker run -d -e MYSQL_ROOT_PASSWORD=test jahrik/arm-mysql:latest
-make deploy                                 # swarm stack deploy (stack: mysql)
+just deploy                                 # swarm stack deploy (stack: mysql)
 ```
 
 ## CI
